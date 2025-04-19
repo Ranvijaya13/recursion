@@ -1,19 +1,19 @@
 
 import java.util.*;
 
-class sum {
+class Factorial {
 
     public static void main(String[] args) {
         Scanner ran = new Scanner(System.in);
-        int n =ran.nextInt();
-        int result = doSum(n);
+        int n = ran.nextInt();
+        int result = doFactorial(n);
         System.out.println(result);
     }
 
-    public static int doSum(int n) {
+    public static int doFactorial(int n) {
         if (n == 0) {
-            return 0;
+            return 1;
         }
-        return n + doSum(n - 1);
+        return n * doFactorial(n - 1);
     }
 }
